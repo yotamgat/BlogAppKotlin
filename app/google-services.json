@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614462515920",
+    "project_id": "mykotlinblog",
+    "storage_bucket": "mykotlinblog.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614462515920:android:5ec96645d298344d34ccd5",
+        "android_client_info": {
+          "package_name": "com.example.mykotlinblog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiODIQ518djZeJCO_7A0UMyvNObFYnFME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
