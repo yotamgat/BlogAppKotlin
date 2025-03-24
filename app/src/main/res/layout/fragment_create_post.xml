@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Create Post"
+            app:titleTextColor="?attr/colorPrimary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/imagePreviewCard"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/ic_image_placeholder"
+                    tools:ignore="ContentDescription" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/selectImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="16dp"
+                android:text="Select Image"
+                app:icon="@drawable/ic_photo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write a description"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/aiGenerateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="16dp"
+                android:text="Generate Chuck Norris Joke"
+                app:icon="@drawable/ic_ai"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/uploadPostButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Upload Post" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/loader"
+        layout="@layout/loader_view" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

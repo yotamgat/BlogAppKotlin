@@ -1,0 +1,60 @@
+[versions]
+agp = "8.7.2"
+cloudinaryAndroidVersion = "3.0.2"
+compiler = "4.15.1"
+converterGson = "2.9.0"
+firebaseBom = "33.8.0"
+generativeai = "0.9.0"
+glide = "4.15.1"
+kotlin = "1.9.24"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxCoroutinesCore = "1.7.3"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.1.4"
+googleServices = "4.4.2"
+firebaseAuthKtx = "23.1.0"
+navigationFragmentKtx = "2.8.5"
+retrofit = "2.9.0"
+roomRuntime = "2.6.1"
+roomCommon = "2.6.1"
+roomRuntimeVersion = "2.4.0"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+androidx-room-runtime-v240 = { module = "androidx.room:room-runtime", version.ref = "roomRuntimeVersion" }
+cloudinary-android = { module = "com.cloudinary:cloudinary-android", version.ref = "cloudinaryAndroidVersion" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-firestore = { module = "com.google.firebase:firebase-firestore" }
+generativeai = { module = "com.google.ai.client.generativeai:generativeai", version.ref = "generativeai" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
