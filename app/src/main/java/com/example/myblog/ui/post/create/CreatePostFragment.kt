@@ -81,11 +81,7 @@ class CreatePostFragment : BaseFragment() {
             showImageSourceDialog()
         }
 
-        binding.aiGenerateButton.setOnClickListener {
-            createPostViewModel.generateDescription { generatedText ->
-                binding.descriptionEditText.setText(generatedText)
-            }
-        }
+
 
         binding.uploadPostButton.setOnClickListener {
             handleUploadOrUpdate(post)

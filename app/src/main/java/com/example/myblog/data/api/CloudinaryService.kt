@@ -22,6 +22,8 @@ class CloudinaryService {
         )
     )
 
+
+
     fun uploadImage(imageUri: Uri, context: Context, onResult: (Boolean, String?) -> Unit) {
         try {
             Log.d("CloudinaryService", "Trying to open InputStream for URI: $imageUri")

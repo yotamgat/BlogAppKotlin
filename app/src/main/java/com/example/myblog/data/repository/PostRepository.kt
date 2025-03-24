@@ -3,7 +3,7 @@ package com.example.myblog.data.repository
 import android.content.Context
 import android.net.Uri
 import android.util.Log
-import com.example.myblog.data.api.ChuckNorrisService
+
 
 import com.example.myblog.data.api.CloudinaryService
 import com.example.myblog.data.api.FirebaseService
@@ -56,14 +56,9 @@ class PostRepository(
         }
     }
 
-    suspend fun generatePostDescription(): String {
-        return try {
-            ChuckNorrisService.fetchRandomJoke() ?: "Failed to fetch joke"
-        } catch (e: Exception) {
-            e.printStackTrace()
-            "Error fetching joke: ${e.message}"
-        }
-    }
+
+
+
     suspend fun toggleLike(postId: String, liked: Boolean, onResult: (Boolean, String?) -> Unit) {
         val currentUserId = firebaseService.getCurrentUserId()
         if (currentUserId != null) {

@@ -18,12 +18,7 @@ class CreatePostViewModel  : ViewModel() {
         }
     }
 
-    fun generateDescription(onResult: (String) -> Unit) {
-        viewModelScope.launch {
-            val generatedText = repository.generatePostDescription()
-            onResult(generatedText)
-        }
-    }
+
     fun updatePostWithImage(postId: String, imageUri: Uri, description: String, context: Context, onResult: (Boolean, String?) -> Unit) {
         viewModelScope.launch {
             repository.updatePostWithImage(postId, imageUri, description, context, onResult)

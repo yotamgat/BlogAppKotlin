@@ -23,11 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val authRepository = AuthRepository(applicationContext)
-//
-//        // בדיקה: קריאה לפונקציה כדי לוודא שהמשתמש נשמר ב-Room
-//        val userId = authRepository.getCurrentUserId()
-//        Log.d("MainActivity", "Current User ID: $userId")
+
         // Find NavHostFragment and get NavController
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -41,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             // User is not logged in, navigate to loginFragment
             navController.navigate(R.id.loginFragment)
         }
+
 
         // Setup Bottom Navigation Bar with NavController
         val bottomNavView: BottomNavigationView = binding.bottomNavBar

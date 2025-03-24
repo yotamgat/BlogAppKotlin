@@ -71,6 +71,8 @@ class FirebaseService {
     fun getCurrentUserId(): String? {
         return auth.currentUser?.uid
     }
+
+
     fun getUserById(userId: String, onResult: (User?) -> Unit) {
         firestore.collection("users").document(userId)
             .get()
